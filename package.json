@@ -2,6 +2,7 @@
   "name": "oficina-indie-7",
   "version": "0.1.0",
   "private": true,
+  "description": "Site oficina indie com alguns estilos do windows 7.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
