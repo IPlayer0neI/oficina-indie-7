@@ -1,5 +1,5 @@
-import { Card } from "./Card/Card"
-import styles from "./index.module.css"
+import styles from "./index.module.css";
+import { Card } from "./Card/Card";
 
 export function CourseContent() {
     return (
@@ -14,7 +14,7 @@ export function CourseContent() {
                     }}
                     contentPathName="programação"
                 >
-                    Aprenda a programar do zero ao avançado, <br/>
+                    Aprenda a programar do zero ao avançado, <br />
                     sem precisar ter conhecimentos prévios.
                 </Card>
                 <Card
@@ -26,7 +26,7 @@ export function CourseContent() {
                     }}
                     contentPathName="arte"
                 >
-                    Aprenda as fundações de design gráfico, arte 2D,<br/>
+                    Aprenda as fundações de design gráfico, arte 2D,<br />
                     sound design, e composição de músicas.
                 </Card>
                 <Card
@@ -38,7 +38,7 @@ export function CourseContent() {
                     }}
                     contentPathName="unity"
                 >
-                    Com a Unity, a engine de criação de jogos mais usada<br/>
+                    Com a Unity, a engine de criação de jogos mais usada<br />
                     do mercado profissional, faremos jogos 2D e 3D.
                 </Card>
                 <Card
@@ -50,7 +50,7 @@ export function CourseContent() {
                     }}
                     contentPathName="marketing e finanças"
                 >
-                    Entenda como divulgar seu jogo, e como<br/>
+                    Entenda como divulgar seu jogo, e como<br />
                     cuidar da parte financeira de seu jogo.
                 </Card>
             </div>

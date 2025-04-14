@@ -1,4 +1,4 @@
-import { CSSProperties,  ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 interface BaloonProps {
     children: ReactNode;
@@ -8,9 +8,9 @@ interface BaloonProps {
     horizontal?: "left" | "right";
 }
 
-const MapVertical= {
+const MapVertical = {
     "top": "is-top",
-    "bottom": "is-bottom",
+    "bottom": "is-bottom"
 }
 
 const MapHorizontal = {
@@ -18,9 +18,9 @@ const MapHorizontal = {
     "right": "is-right"
 }
 
-export function Baloon({ children, className, style, horizontal = "right", vertical = "bottom" }: BaloonProps){
+export function Baloon({ children, className, style, horizontal = "right", vertical = "bottom" }: BaloonProps) {
     return (
-        <div role="tooltip" className={`${className} ${MapHorizontal[horizontal]} ${MapVertical[vertical]}`} style={{ backgroundColor: "white", ...style}}>
+        <div role="tooltip" className={`${className} ${MapHorizontal[horizontal]} ${MapVertical[vertical]}`} style={{ backgroundColor: "white", ...style }}>
             {children}
         </div>
     )

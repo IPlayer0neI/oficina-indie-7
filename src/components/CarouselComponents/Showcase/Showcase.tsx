@@ -1,5 +1,5 @@
 import { RefObject } from "react";
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 
 interface ShowcaseProps {
     items: string[] | Array<Array<string>>;
@@ -29,7 +29,7 @@ export function Showcase({ items, height, refMeasuresInstance, itemStyle, carous
                                 }}
                                 className={`${styles.item} ${itemStyle} ${carouselItemStyle(index)}`}
                             >
-                                
+
                                 <img className={styles.itemImg} src={`assets/${imgBasePath}/${imgName}`} />
                                 {
                                     isArray && (

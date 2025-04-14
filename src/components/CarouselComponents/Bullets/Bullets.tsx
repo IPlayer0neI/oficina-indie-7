@@ -1,10 +1,10 @@
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 
 interface BulletsProps {
     length: number;
-    bulletItemStyle: (index: number) => string,
-    setPosition: (newPosition: number) => void,
-    bottomPosition?: string
+    bulletItemStyle: (index: number) => string;
+    setPosition: (newPosition: number) => void;
+    bottomPosition?: string;
 }
 
 export function Bullets({ length, bottomPosition, bulletItemStyle, setPosition }: BulletsProps) {

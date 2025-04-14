@@ -1,5 +1,5 @@
 import { RefObject } from "react";
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 import { Window } from "@/components/Windows7Components/Window/Window";
 import { Baloon } from "@/components/Windows7Components/Baloon/Baloon";
 

@@ -1,5 +1,5 @@
-import { Window } from "../Windows7Components/Window/Window"
-import styles from "./index.module.css"
+import styles from "./index.module.css";
+import { Window } from "../Windows7Components/Window/Window";
 
 export function Introduction() {
     return (

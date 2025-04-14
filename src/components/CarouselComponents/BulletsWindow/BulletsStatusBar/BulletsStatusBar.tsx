@@ -7,7 +7,7 @@ export function BulletsStatusBar({ length, position }: BulletsProps) {
     const positivePositionValue = position > length ?
         (length * 2) - position :
         position;
-        
+
     return (
         <div className="status-bar">
             <p className="status-bar-field">Press F1 for help</p>

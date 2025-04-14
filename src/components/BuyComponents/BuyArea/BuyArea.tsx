@@ -1,6 +1,6 @@
-import { Baloon } from "@/components/Windows7Components/Baloon/Baloon"
-import { BuyButton } from "../BuyButton/BuyButton"
-import styles from "./index.module.css"
+import styles from "./index.module.css";
+import { Baloon } from "@/components/Windows7Components/Baloon/Baloon";
+import { BuyButton } from "../BuyButton/BuyButton";
 
 export function BuyArea() {
     return (

@@ -1,8 +1,8 @@
-import { BuyArea } from "../BuyComponents/BuyArea/BuyArea"
-import { Tab } from "../Windows7Components/Tab/Tab"
-import { Window } from "../Windows7Components/Window/Window"
-import { Benefit } from "./Benefit/Benefit"
-import styles from "./index.module.css"
+import styles from "./index.module.css";
+import { BuyArea } from "../BuyComponents/BuyArea/BuyArea";
+import { Tab } from "../Windows7Components/Tab/Tab";
+import { Window } from "../Windows7Components/Window/Window";
+import { Benefit } from "./Benefit/Benefit";
 
 export function CourseBuyArea() {
     return (

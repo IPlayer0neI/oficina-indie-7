@@ -1,5 +1,5 @@
+import styles from "./index.module.css";
 import { Window } from "@/components/Windows7Components/Window/Window";
-import styles from "./index.module.css"
 import { BulletsStatusBar } from "./BulletsStatusBar/BulletsStatusBar";
 
 interface BulletsProps {

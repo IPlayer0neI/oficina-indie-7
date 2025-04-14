@@ -6,7 +6,6 @@ import { AboutAndreYoung } from "@/components/AboutAndreYoung/AboutAndreYoung";
 import { CourseGameJam } from "@/components/CourseGameJam/CourseGameJam";
 import { GamesByStudents } from "@/components/StudentsGamesCarousel/StudentsGamesCarousel";
 import { CurriculumList } from "@/components/CourseCurriculum/CourseCurriculum";
-
 import { Border } from "@/components/Border/Border";
 import { Footer } from "@/components/Footer/Footer";
 import { Background } from "@/components/Background/Background";

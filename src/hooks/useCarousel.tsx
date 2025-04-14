@@ -1,24 +1,24 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export function useCarousel(length: number, w: number) {
     const [position, setPosition] = useState(0);
     const [width, setWidth] = useState(w);
 
-    useEffect(function(){
+    useEffect(function () {
         setWidth(w)
     }, [w])
 
     function handlePrevious() {
         const newPosition = position - 1;
-        setPosition(newPosition < 0 ? length - 1 : newPosition);
+        setPosition(newPosition < 0 ? length - 1 : newPosition)
     }
 
     function handleNext() {
         const newPosition = position + 1;
-        setPosition(newPosition >= length ? 0 : newPosition);
+        setPosition(newPosition >= length ? 0 : newPosition)
     }
 
-    function getFixedPosition(index: number){
+    function getFixedPosition(index: number) {
         if (index >= (length - position - 1)) {
             return ((index - (length)) + position);
         }

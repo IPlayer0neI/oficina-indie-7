@@ -26,7 +26,7 @@ function renderList(node: NodeTree) {
                     hasMoreTree && (
                         <ul>
                             {
-                               <RenderTree tree={tree}/>
+                                <RenderTree tree={tree} />
                             }
                         </ul>
                     )
@@ -36,7 +36,7 @@ function renderList(node: NodeTree) {
     }
 }
 
-function RenderTree({tree} : { tree: Tree }) {
+function RenderTree({ tree }: { tree: Tree }) {
     return (
         <>
             {
@@ -54,9 +54,9 @@ interface TreeViewConnectorProps {
 
 export function TreeviewConnector({ tree, className, connector = true }: TreeViewConnectorProps) {
     return (
-        <ul className={`tree-view ${connector? "has-connector has-collapse-button": ""} has-container ${className}`}>
+        <ul className={`tree-view ${connector ? "has-connector has-collapse-button" : ""} has-container ${className}`}>
             {
-                <RenderTree tree={tree}/>
+                <RenderTree tree={tree} />
             }
         </ul>
     )

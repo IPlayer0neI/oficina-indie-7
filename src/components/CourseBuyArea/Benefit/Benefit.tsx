@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 
 interface Benefitprops {
     imgName: string;

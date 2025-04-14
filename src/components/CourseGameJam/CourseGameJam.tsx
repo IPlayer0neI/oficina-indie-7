@@ -1,7 +1,7 @@
-import { BuyArea } from "../BuyComponents/BuyArea/BuyArea"
-import { TreeviewConnector } from "../Windows7Components/TreeviewConnector/TreeviewConnector"
-import { Window } from "../Windows7Components/Window/Window"
-import styles from "./index.module.css"
+import styles from "./index.module.css";
+import { BuyArea } from "../BuyComponents/BuyArea/BuyArea";
+import { TreeviewConnector } from "../Windows7Components/TreeviewConnector/TreeviewConnector";
+import { Window } from "../Windows7Components/Window/Window";
 
 const tree = [{
     title: " Quando acontece e como ????",
@@ -28,16 +28,16 @@ const tree = [{
             ]
         }
     ]
-}]
+}];
 
 export function CourseGameJam() {
     return (
         <div className={styles.buyGameJamContainer}>
-            <Window 
-            className={styles.buyGameJam} 
-            innerWindowClassName={styles.innerWindow}
-            location={["Oficina indie", "game jam"]}
-            windowText="Game jam"
+            <Window
+                className={styles.buyGameJam}
+                innerWindowClassName={styles.innerWindow}
+                location={["Oficina indie", "game jam"]}
+                windowText="Game jam"
             >
                 <div className={styles.gameJam}>
                     <div className={styles.gameJamImg}>

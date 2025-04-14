@@ -1,20 +1,20 @@
-import { Showcase } from "../../CarouselComponents/Showcase/Showcase"
-import styles from "./index.module.css"
 import { RefObject, useCallback } from "react";
+import styles from "./index.module.css";
+import { Showcase } from "../../CarouselComponents/Showcase/Showcase";
 import { ArrowButton } from "@/components/CarouselComponents/Arrows/ArrowButtons/ArrowButtons";
 
 interface AndreYoungGamesCarouselProps {
     refMeasuresInstance: RefObject<HTMLDivElement>;
     divHeight: number;
-    position: number; 
-    getFixedPosition: (index: number) => number; 
+    position: number;
+    getFixedPosition: (index: number) => number;
     handleNext: () => void;
-    handlePrevious: () => void; 
+    handlePrevious: () => void;
     spacingLeftValue: (index: number) => void;
     duplicateItems: string[][];
 }
 
-export function AndreYoungGamesCarousel({ 
+export function AndreYoungGamesCarousel({
     refMeasuresInstance,
     divHeight,
     getFixedPosition,
@@ -29,7 +29,7 @@ export function AndreYoungGamesCarousel({
         if (((fixedPosition < 0 || fixedPosition > 2))) {
             return styles.itemHidden;
         }
-    }, [getFixedPosition])
+    }, [getFixedPosition]);
 
     return (
         <div className={styles.andreYoungGamesCarousel}>
@@ -42,7 +42,7 @@ export function AndreYoungGamesCarousel({
                 itemStyle={styles.carouselItemStyle}
                 imgBasePath="andre-young-games"
             />
-            <ArrowButton handleNext={handleNext} handlePrevious={handlePrevious}/>
+            <ArrowButton handleNext={handleNext} handlePrevious={handlePrevious} />
         </div>
     )
 }

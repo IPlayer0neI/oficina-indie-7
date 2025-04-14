@@ -1,8 +1,9 @@
+import { RefObject } from "react";
+import styles from "./index.module.css";
 import { useDivMeasures } from "@/hooks/useDivMeasures";
-import { BulletsStatusBar } from "../CarouselComponents/BulletsWindow/BulletsStatusBar/BulletsStatusBar"
-import { Window } from "../Windows7Components/Window/Window"
-import { AndreYoungGamesCarousel } from "./AndreYoungGamesCarousel/AndreYoungGamesCarousel"
-import styles from "./index.module.css"
+import { BulletsStatusBar } from "../CarouselComponents/BulletsWindow/BulletsStatusBar/BulletsStatusBar";
+import { Window } from "../Windows7Components/Window/Window";
+import { AndreYoungGamesCarousel } from "./AndreYoungGamesCarousel/AndreYoungGamesCarousel";
 import { useCarousel } from "@/hooks/useCarousel";
 
 const itemsLonely = [
@@ -10,7 +11,7 @@ const itemsLonely = [
     ["seraphs-last-stand-1.webp", "Seraph's Last Stand"],
     ["ending-tau.webp", "Ending Tau"],
     ["gods-of-sand-1.webp", "Gods of Sand"]
-]
+];
 const duplicateItems = itemsLonely.concat(itemsLonely);
 
 export function AboutAndreYoung() {
@@ -43,7 +44,7 @@ export function AboutAndreYoung() {
                     </div>
                 </div>
                 <AndreYoungGamesCarousel
-                    refMeasuresInstance={refMeasuresInstance}
+                    refMeasuresInstance={refMeasuresInstance as RefObject<HTMLDivElement>}
                     divHeight={divHeight}
                     position={position}
                     getFixedPosition={getFixedPosition}

@@ -1,7 +1,7 @@
-import { BuyButton } from "../BuyComponents/BuyButton/BuyButton"
-import { TreeviewConnector } from "../Windows7Components/TreeviewConnector/TreeviewConnector"
-import { Window } from "../Windows7Components/Window/Window"
-import styles from "./index.module.css"
+import styles from "./index.module.css";
+import { BuyButton } from "../BuyComponents/BuyButton/BuyButton";
+import { TreeviewConnector } from "../Windows7Components/TreeviewConnector/TreeviewConnector";
+import { Window } from "../Windows7Components/Window/Window";
 
 const courseModules = [
     {
@@ -94,22 +94,22 @@ const courseModules = [
             "Finanças: Como pagar menos impostos"
         ]
     }
-]
+];
 
 export function CurriculumList() {
     return (
         <div className={styles.curriculumListContainer}>
-            <Window 
-            className={styles.curriculumList} 
-            innerWindowClassName={styles.innerWindow}
-            location={["Oficina indie", "currículo"]}
-            windowText="Nosso currículo"
+            <Window
+                className={styles.curriculumList}
+                innerWindowClassName={styles.innerWindow}
+                location={["Oficina indie", "currículo"]}
+                windowText="Nosso currículo"
             >
                 <h2 className={`textShine ${styles.curriculumListTitle}`} >
                     Conheça a jornada da Oficina Indie
                 </h2>
                 {
-                    <TreeviewConnector connector={false} className={styles.treeClass} tree={courseModules}/>
+                    <TreeviewConnector connector={false} className={styles.treeClass} tree={courseModules} />
                 }
                 <div className={styles.buttonStyle}>
                     <BuyButton />

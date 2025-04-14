@@ -1,4 +1,4 @@
-import { CSSProperties, JSX, ReactElement } from "react"
+import { CSSProperties, JSX, ReactElement } from "react";
 import { Location } from "../Location/Location";
 
 interface WindowProps {
@@ -12,7 +12,7 @@ interface WindowProps {
     width?: string;
     style?: CSSProperties;
     barControls?: BarControls;
-    location?:  string[];
+    location?: string[];
 }
 
 type BarControls = ("minimize" | "help" | "restore" | "close" | "maximize")[];
@@ -50,36 +50,36 @@ export function Window({
     return (
         <div className={`window glass active ${className}`} style={{ width: width, ...style }}>
             <div className="title-bar"
-            style={{
-                flexDirection: "column"
-            }}
+                style={{
+                    flexDirection: "column"
+                }}
             >
-                    <div 
+                <div
                     style={{
                         width: "100%",
                         display: "flex",
                         justifyContent: "space-between"
                     }}
-                    >
+                >
                     <div className="title-bar-text"
-                    style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "5px"
-                    }}
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            gap: "5px"
+                        }}
                     >
                         <img src="icon.png"
-                        style={{
-                            width: "15px",
-                            height: "15px"
-                        }}
+                            style={{
+                                width: "15px",
+                                height: "15px"
+                            }}
                         />
                         {windowHeadElement || windowText}
                     </div>
                     {
                         renderBarControls(barControls)
                     }
-                    </div>
+                </div>
                 {
                     location && (
                         <Location paths={location} />

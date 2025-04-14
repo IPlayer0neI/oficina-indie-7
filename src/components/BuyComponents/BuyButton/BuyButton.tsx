@@ -1,4 +1,4 @@
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 
 export function BuyButton() {
     return (
@@ -6,7 +6,7 @@ export function BuyButton() {
             <div className={styles.trasnparentBorder} />
             <button className={styles.buyButton}>
                 <h3>
-                QUERO COMEÇAR AGORA
+                    QUERO COMEÇAR AGORA
                 </h3>
             </button>
         </a>

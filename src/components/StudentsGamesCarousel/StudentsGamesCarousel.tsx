@@ -1,6 +1,6 @@
-import { PerspectiveCarousel } from "../PerspectiveCarousel/PerspectiveCarousel"
-import { Baloon } from "../Windows7Components/Baloon/Baloon"
-import styles from "./index.module.css"
+import styles from "./index.module.css";
+import { PerspectiveCarousel } from "../PerspectiveCarousel/PerspectiveCarousel";
+import { Baloon } from "../Windows7Components/Baloon/Baloon";
 
 const gamesList = [
     ["Pidgeon.png", "Carrier Pigeon"],
@@ -9,7 +9,7 @@ const gamesList = [
     ["HumanFarm.png", "Human Farm"],
     ["PiledUp.png", "Piled Up"],
     ["GoodBoy.png", "Good Boy"],
-]
+];
 
 export function GamesByStudents() {
     return (

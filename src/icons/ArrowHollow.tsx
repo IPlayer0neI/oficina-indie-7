@@ -1,12 +1,14 @@
 interface ArrowHollowProps {
-    side?: string | undefined
+    side?: string | undefined;
 }
 
 export function ArrowHollow({ side }: ArrowHollowProps) {
     let angle = 0;
+
     if (side == "left") {
-        angle = 180
+        angle = 180;
     }
+
     return (
         <div style={{
             transform: `rotate(${angle}deg)`,

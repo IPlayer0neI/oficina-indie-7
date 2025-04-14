@@ -1,5 +1,5 @@
+import styles from "./index.module.css";
 import { useWaitToPassHandler } from "@/hooks/useWaitToPassHandler";
-import styles from "./index.module.css"
 
 interface ArrowButtonProps {
     handlePrevious: () => void;
@@ -15,7 +15,7 @@ export function ArrowButton({ handlePrevious, handleNext }: ArrowButtonProps) {
                 &lt;&lt;&lt; Previous Slide
             </button>
             <button onClick={waitHandler(handlePrevious)}>
-                 Next Slide &gt;&gt;&gt;
+                Next Slide &gt;&gt;&gt;
             </button>
         </div>
     )

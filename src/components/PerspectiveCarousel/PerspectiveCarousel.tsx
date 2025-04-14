@@ -1,8 +1,8 @@
-import styles from "./index.module.css"
+import styles from "./index.module.css";
 import { useCarousel } from "@/hooks/useCarousel";
 import { useDivMeasures } from "@/hooks/useDivMeasures";
 import { Arrows } from "../CarouselComponents/Arrows/Arrows";
-import { useCallback } from "react";
+import { RefObject, useCallback } from "react";
 import { ShowcaseWindow } from "../CarouselComponents/ShowcaseWindow/ShowcaseWindow";
 import { BulletsWindow } from "../CarouselComponents/BulletsWindow/BulletsWindow";
 
@@ -29,7 +29,7 @@ export function PerspectiveCarousel({ items, customItemEmphasisStyle, bottomPosi
         } else if (!((fixedPosition == 0) || (fixedPosition == 2))) {
             return styles.carouselItemHidden;
         }
-    }, [customItemEmphasisStyle, getFixedPosition])
+    }, [customItemEmphasisStyle, getFixedPosition]);
 
     return (
         <div className={styles.carouselContainer}>
@@ -39,7 +39,7 @@ export function PerspectiveCarousel({ items, customItemEmphasisStyle, bottomPosi
                     height={divHeight}
                     spacingLeftValue={spacingLeftValue}
                     carouselItemStyle={carouselItemStyle}
-                    refMeasuresInstance={refMeasuresInstance}
+                    refMeasuresInstance={refMeasuresInstance as RefObject<HTMLDivElement>}
                     itemStyle={styles.carouselItem}
                     imgBasePath={imgBasePath}
                 />
