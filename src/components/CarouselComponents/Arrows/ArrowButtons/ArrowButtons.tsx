@@ -1,3 +1,4 @@
+import { Button7 } from "react-7css";
 import styles from "./index.module.css";
 import { useWaitToPassHandler } from "@/hooks/useWaitToPassHandler";
 
@@ -11,12 +12,12 @@ export function ArrowButton({ handlePrevious, handleNext }: ArrowButtonProps) {
 
     return (
         <div className={styles.buttonContainer}>
-            <button onClick={waitHandler(handleNext)}>
+            <Button7 onClick={waitHandler(handleNext)}>
                 &lt;&lt;&lt; Previous Slide
-            </button>
-            <button onClick={waitHandler(handlePrevious)}>
+            </Button7>
+            <Button7 onClick={waitHandler(handlePrevious)}>
                 Next Slide &gt;&gt;&gt;
-            </button>
+            </Button7>
         </div>
     )
 }

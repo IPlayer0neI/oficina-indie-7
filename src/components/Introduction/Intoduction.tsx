@@ -1,5 +1,6 @@
 import styles from "./index.module.css";
 import { Window } from "../Windows7Components/Window/Window";
+import { StatusBarField7 } from "react-7css";
 
 export function Introduction() {
     return (
@@ -10,11 +11,11 @@ export function Introduction() {
                 scrollBar={true}
                 innerWindowClassName={styles.innerWindow}
                 statusBar={
-                    <div className="status-bar">
-                        <p className="status-bar-field">Scrolle para ver mais</p>
-                        <p className="status-bar-field">Um dos melhores cursos de criação de jogos do Brasil</p>
-                        <p className="status-bar-field">Aprovação: 100%</p>
-                    </div>
+                    <>
+                        <StatusBarField7>Scrolle para ver mais</StatusBarField7>
+                        <StatusBarField7>Um dos melhores cursos de criação de jogos do Brasil</StatusBarField7>
+                        <StatusBarField7>Aprovação: 100%</StatusBarField7>
+                    </>
                 }
                 location={["Oficina indie", "introdução"]}
             >

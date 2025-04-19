@@ -1,7 +1,7 @@
 import { CSSProperties, ReactNode } from "react";
 import styles from "./index.module.css";
 import { Window } from "@/components/Windows7Components/Window/Window";
-import { Baloon } from "@/components/Windows7Components/Baloon/Baloon";
+import { Ballon7 } from "react-7css";
 
 interface CardProps {
     imgName: string;
@@ -20,11 +20,11 @@ export function Card({ imgName, title, children, style, contentPathName }: CardP
                     <span className={styles.cardTitle}>{title}</span>
                 </p>
             </Window>
-            <Baloon className={styles.baloonStyle}>
+            <Ballon7 className={styles.baloonStyle} vertical="bottom">
                 <p className={styles.cardParagraph}>
                     {children}
                 </p>
-            </Baloon>
+            </Ballon7>
         </div>
     )
 }

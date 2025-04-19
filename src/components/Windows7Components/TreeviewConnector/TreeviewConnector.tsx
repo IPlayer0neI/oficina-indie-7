@@ -1,3 +1,5 @@
+import { TreeView7, TreeViewNode7 } from "react-7css";
+
 type Tree = (NodeTree | string)[];
 
 type NodeTree = {
@@ -11,53 +13,43 @@ function renderList(node: NodeTree) {
 
     if (isString) {
         return (
-            <li key={node}>
+            <TreeViewNode7 key={node}>
                 {node}
-            </li>
+            </TreeViewNode7>
         )
     } else {
         const { title, tree, open } = node;
-        const hasMoreTree = tree && tree[0];
+        const hasMoreTree = tree ;
 
         return (
-            <details open={open} key={title}>
-                <summary>{title}</summary>
+            <TreeViewNode7 summary={title} details open={open} key={title}>
                 {
                     hasMoreTree && (
-                        <ul>
+                        <TreeView7>
                             {
-                                <RenderTree tree={tree} />
+                                tree.map(renderList)
                             }
-                        </ul>
+                        </TreeView7>
                     )
                 }
-            </details>
+            </TreeViewNode7>
         )
     }
-}
-
-function RenderTree({ tree }: { tree: Tree }) {
-    return (
-        <>
-            {
-                tree.map(renderList)
-            }
-        </>
-    )
 }
 
 interface TreeViewConnectorProps {
     tree: Tree;
     className?: string;
     connector?: boolean;
+    collapse?: boolean
 }
 
-export function TreeviewConnector({ tree, className, connector = true }: TreeViewConnectorProps) {
+export function TreeviewConnector({ tree, className, collapse = true, connector = true }: TreeViewConnectorProps) {
     return (
-        <ul className={`tree-view ${connector ? "has-connector has-collapse-button" : ""} has-container ${className}`}>
+        <TreeView7 root connector={connector} collapse={collapse} className={className}>
             {
-                <RenderTree tree={tree} />
+                tree.map(renderList)
             }
-        </ul>
+        </TreeView7>
     )
 }

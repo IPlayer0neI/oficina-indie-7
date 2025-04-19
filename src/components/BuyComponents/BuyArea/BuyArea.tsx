@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
-import { Baloon } from "@/components/Windows7Components/Baloon/Baloon";
 import { BuyButton } from "../BuyButton/BuyButton";
+import { Ballon7 } from "react-7css";
 
 export function BuyArea() {
     return (
@@ -8,9 +8,9 @@ export function BuyArea() {
             <div className={styles.priceContainer}>
                 <h2 className={styles.price}>
                     <span className={styles.tagContainer}>
-                        <Baloon vertical="top" className={styles.tag}>
+                        <Ballon7 className={styles.tag}>
                             POR APENAS
-                        </Baloon>
+                        </Ballon7>
                     </span>
                     <span className={styles.amount}>
                         R$149

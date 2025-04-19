@@ -28,6 +28,7 @@ export function AboutAndreYoung() {
                     <BulletsStatusBar length={itemsLonely.length} position={position} />
                 }
                 location={["Oficina indie", "sobre o andrezitos gameplays"]}
+                windowText="Sobre o andrezitos"
             >
                 <div className={styles.andreYoungDescriptionContainer}>
                     <div className={styles.andreYoungImgContainer}>

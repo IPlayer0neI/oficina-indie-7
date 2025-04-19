@@ -1,7 +1,7 @@
 import { RefObject } from "react";
 import styles from "./index.module.css";
 import { Window } from "@/components/Windows7Components/Window/Window";
-import { Baloon } from "@/components/Windows7Components/Baloon/Baloon";
+import { Ballon7 } from "react-7css";
 
 interface ShowcaseProps {
     items: string[] | Array<Array<string>>;
@@ -32,15 +32,13 @@ export function ShowcaseWindow({ items, height, refMeasuresInstance, itemStyle, 
                                 className={`${styles.item} ${itemStyle} ${carouselItemStyle(index)}`}
                             >
                                 <Window>
-                                    <>
-                                        <img className={styles.itemImg} src={`assets/${imgBasePath}/${imgName}`} />
-                                    </>
+                                    <img className={styles.itemImg} src={`assets/${imgBasePath}/${imgName}`} />
                                 </Window>
                                 {
                                     isArray && (
-                                        <Baloon>
+                                        <Ballon7 vertical="bottom">
                                             <h3 className={`textShine ${styles.itemTitle}`}>{value[1]}</h3>
-                                        </Baloon>
+                                        </Ballon7>
                                     )
                                 }
                             </div>

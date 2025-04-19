@@ -109,7 +109,7 @@ export function CurriculumList() {
                     Conheça a jornada da Oficina Indie
                 </h2>
                 {
-                    <TreeviewConnector connector={false} className={styles.treeClass} tree={courseModules} />
+                    <TreeviewConnector connector={false} className={styles.treeClass} collapse={false} tree={courseModules} />
                 }
                 <div className={styles.buttonStyle}>
                     <BuyButton />

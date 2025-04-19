@@ -1,14 +1,15 @@
+import { Button7 } from "react-7css";
 import styles from "./index.module.css";
 
 export function BuyButton() {
     return (
         <a className={styles.buyButtonContainer}>
             <div className={styles.trasnparentBorder} />
-            <button className={styles.buyButton}>
+            <Button7 className={styles.buyButton}>
                 <h3>
                     QUERO COMEÇAR AGORA
                 </h3>
-            </button>
+            </Button7>
         </a>
     )
 }

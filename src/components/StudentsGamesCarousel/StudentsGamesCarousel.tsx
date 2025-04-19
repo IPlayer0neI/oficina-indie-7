@@ -1,6 +1,6 @@
 import styles from "./index.module.css";
 import { PerspectiveCarousel } from "../PerspectiveCarousel/PerspectiveCarousel";
-import { Baloon } from "../Windows7Components/Baloon/Baloon";
+import { Ballon7 } from "react-7css";
 
 const gamesList = [
     ["Pidgeon.png", "Carrier Pigeon"],
@@ -16,11 +16,11 @@ export function GamesByStudents() {
         <div className={styles.gamesByStudentsContainer}>
             <div className={styles.gamesByStudents}>
                 <div className={styles.titleContainer}>
-                    <Baloon vertical="top">
+                    <Ballon7>
                         <h1 >
                             Conheça alguns jogos feitos por nossos alunos durante o curso:
                         </h1>
-                    </Baloon>
+                    </Ballon7>
                 </div>
                 <div>
                     <div className={styles.gamesByStudentsCarouselContainer}>

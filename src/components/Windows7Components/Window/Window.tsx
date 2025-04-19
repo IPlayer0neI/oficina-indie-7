@@ -1,4 +1,5 @@
 import { CSSProperties, JSX, ReactElement } from "react";
+import { Close7, Help7, Maximize7, Minimize7, StatusBar7, TitleBar7, TitleBarControls7, TitleBarText7, Window7, WindowBody7 } from "react-7css"
 import { Location } from "../Location/Location";
 
 interface WindowProps {
@@ -17,19 +18,23 @@ interface WindowProps {
 
 type BarControls = ("minimize" | "help" | "restore" | "close" | "maximize")[];
 
-function renderBarControls(barControls: BarControls) {
+interface BarControlsProps {
+    controls: BarControls;
+}
+
+function BarControls({ controls }: BarControlsProps) {
     function hasValue(control: string) {
-        return barControls.findIndex((c) => c == control) > -1;
+        return controls.findIndex((c) => c == control) > -1;
     }
 
     return (
         (
-            <div className="title-bar-controls">
-                {hasValue("help") && <button aria-label="Help"></button>}
-                {hasValue("minimize") && <button aria-label="Minimize"></button>}
-                {hasValue("maximize") && <button aria-label="Maximize"></button>}
-                {hasValue("close") && <button aria-label="Close"></button>}
-            </div>
+            <TitleBarControls7>
+                {hasValue("help") && <Help7 />}
+                {hasValue("minimize") && <Minimize7 />}
+                {hasValue("maximize") && <Maximize7 />}
+                {hasValue("close") && <Close7 />}
+            </TitleBarControls7>
         )
     )
 }
@@ -48,26 +53,10 @@ export function Window({
     location
 }: WindowProps) {
     return (
-        <div className={`window glass active ${className}`} style={{ width: width, ...style }}>
-            <div className="title-bar"
-                style={{
-                    flexDirection: "column"
-                }}
-            >
-                <div
-                    style={{
-                        width: "100%",
-                        display: "flex",
-                        justifyContent: "space-between"
-                    }}
-                >
-                    <div className="title-bar-text"
-                        style={{
-                            display: "flex",
-                            alignItems: "center",
-                            gap: "5px"
-                        }}
-                    >
+        <Window7 active style={{ width: width, ...style }} className={className}>
+            <TitleBar7 style={{ flexDirection: "column" }}>
+                <div style={{ width: "100%", display: "flex", justifyContent: "space-between" }}>
+                    <TitleBarText7 style={{ display: "flex", alignItems: "center", gap: "5px" }}>
                         <img src="icon.png"
                             style={{
                                 width: "15px",
@@ -75,21 +64,25 @@ export function Window({
                             }}
                         />
                         {windowHeadElement || windowText}
-                    </div>
-                    {
-                        renderBarControls(barControls)
-                    }
+                    </TitleBarText7>
+                    <TitleBarControls7 controls={barControls} />
                 </div>
                 {
                     location && (
                         <Location paths={location} />
                     )
                 }
-            </div>
-            <div className={`window-body has-space ${scrollBar ? "has-scrollbar" : ""} ${innerWindowClassName}`} style={{ overflow: "auto" }}>
+            </TitleBar7>
+            <WindowBody7 space className={`${scrollBar ? "has-scrollbar" : ""} ${innerWindowClassName}`} style={{ overflow: "auto" }}>
                 {children || null}
-            </div>
-            {statusBar}
-        </div>
+            </WindowBody7>
+            {
+                statusBar && (
+                    <StatusBar7>
+                        {statusBar}
+                    </StatusBar7>
+                )
+            }
+        </Window7>
     )
 }
