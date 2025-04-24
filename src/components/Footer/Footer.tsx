@@ -1,6 +1,9 @@
+import { useTime } from "@/hooks/useTime";
 import styles from "./index.module.css";
 
 export function Footer() {
+    const { time } = useTime();
+
     return (
         <div className={styles.footerContainer}>
             <div className={styles["task-bar"]}>
@@ -42,7 +45,7 @@ export function Footer() {
                         </div>
                     </div>
                     <div className={`${styles["task-bar-tray-item"]} ${styles["calendar"]} ${styles["active"]}`}>
-                        <span>01:02</span>
+                        <span>{time}</span>
                         <span>24/03/2025</span>
                     </div>
                     <div className={`${styles["task-bar-tray-item"]} ${styles["show-desktop"]} ${styles["active"]}`}>
