@@ -1,5 +1,5 @@
 interface ArrowHollowProps {
-    side?: string | undefined;
+    side?: "left";
 }
 
 export function ArrowHollow({ side }: ArrowHollowProps) {
